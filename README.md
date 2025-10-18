@@ -1,9 +1,8 @@
 # 📱 UserManager Mobile
 
-![Screenshot_2025-10-18-19-02-31-372_host exp exponent](https://github.com/user-attachments/assets/3e92a803-7a33-40a7-b493-0eb1de8dd366)
+<img width="445" height="943" alt="native" src="https://github.com/user-attachments/assets/c34fc6e4-1acd-47f1-870e-691df27087bf" />
 
 ---
-
 ## 🛠 Stack Tecnológica
 
 - **Frontend:** React Native + Expo
