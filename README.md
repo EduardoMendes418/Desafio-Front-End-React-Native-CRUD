@@ -1,6 +1,6 @@
 # 📱 UserManager Mobile
 
-![IMG_20251018_165013](https://github.com/user-attachments/assets/c86cfabd-f412-400a-b6b2-82dd092b97c2)
+<img width="433" height="916" alt="native" src="https://github.com/user-attachments/assets/8f6abbaf-e6ad-429d-9a54-8a46206ce99c" />
 
 ---
 
