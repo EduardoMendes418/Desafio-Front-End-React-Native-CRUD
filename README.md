@@ -1,8 +1,9 @@
 # 📱 UserManager Mobile
 
-<img width="445" height="943" alt="native" src="https://github.com/user-attachments/assets/c34fc6e4-1acd-47f1-870e-691df27087bf" />
+<img width="433" height="916" alt="native" src="https://github.com/user-attachments/assets/8f6abbaf-e6ad-429d-9a54-8a46206ce99c" />
 
 ---
+
 ## 🛠 Stack Tecnológica
 
 - **Frontend:** React Native + Expo
@@ -66,4 +67,12 @@
 
 - [Node.js](https://nodejs.org/)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
-- Git instalado localmente
+
+```bash
+# 1. Instalar as dependências
+npx expo install
+
+# 2. Rodar o projeto em modo desenvolvimento
+npx expo start
+
+```
