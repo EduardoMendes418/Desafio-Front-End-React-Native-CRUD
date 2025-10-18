@@ -1,9 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { User } from '../types/user';
-import { useTranslation } from 'react-i18next';
-import { theme } from '../styles/theme';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
+
+import { useTranslation } from "react-i18next";
+import { User } from "../types/user";
+import { theme } from "../styles/theme";
+import { LinearGradient } from "expo-linear-gradient";
 
 interface StatsCardsProps {
   users: User[];
@@ -14,128 +16,106 @@ export const StatsCards: React.FC<StatsCardsProps> = ({ users }) => {
 
   const stats = {
     total: users.length,
-    active: users.length, 
-    withEmail: users.filter(u => u.email).length,
-    withWebsite: users.filter(u => u.website).length,
+    active: users.length,
+    withEmail: users.filter((u) => u.email).length,
+    withWebsite: users.filter((u) => u.website).length,
   };
 
   const cards = [
     {
-      icon: 'people' as const,
-      label: t('totalUsers'),
+      iconName: "users",
+      label: t("totalUsers"),
       value: stats.total,
-      color: '#2563eb',
+      gradient: ["#3b82f6", "#06b6d4"],
     },
     {
-      icon: 'person-check' as const, 
-      label: t('activeUsers'),
+      iconName: "user-check",
+      label: t("activeUsers"),
       value: stats.active,
-      color: '#10b981',
+      gradient: ["#10b981", "#059669"],
     },
     {
-      icon: 'mail' as const,
-      label: t('withEmail'),
+      iconName: "envelope",
+      label: t("withEmail"),
       value: stats.withEmail,
-      color: '#8b5cf6',
+      gradient: ["#8b5cf6", "#ec4899"],
     },
     {
-      icon: 'globe' as const,
-      label: t('withWebsite'),
+      iconName: "globe",
+      label: t("withWebsite"),
       value: stats.withWebsite,
-      color: '#f59e0b',
+      gradient: ["#f97316", "#ef4444"],
     },
   ];
 
   return (
     <View style={styles.gridContainer}>
-      <View style={styles.gridRow}>
-        {cards.slice(0, 2).map((card, index) => (
-          <View key={index} style={styles.gridCard}>
-            <View style={styles.cardContent}>
-              <View style={styles.textContainer}>
-                <Text style={styles.value}>{card.value}</Text>
-                <Text style={styles.label}>{card.label}</Text>
-              </View>
-              <View style={[styles.iconContainer, { backgroundColor: card.color }]}>
-                <Ionicons name={card.icon} size={20} color="#FFFFFF" />
-              </View>
+      {cards.map((card, index) => (
+        <View key={index} style={styles.gridCard}>
+          <View style={styles.cardContent}>
+            <View style={styles.textContainer}>
+              <Text style={styles.label}>{card.label}</Text>
+              <Text style={styles.value}>{card.value}</Text>
             </View>
+            <LinearGradient
+              colors={card.gradient}
+              style={styles.iconContainer}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+            >
+              <FontAwesome5 name={card.iconName} size={20} color="#fff" />
+            </LinearGradient>
           </View>
-        ))}
-      </View>
-      <View style={styles.gridRow}>
-        {cards.slice(2, 4).map((card, index) => (
-          <View key={index + 2} style={styles.gridCard}>
-            <View style={styles.cardContent}>
-              <View style={styles.textContainer}>
-                <Text style={styles.value}>{card.value}</Text>
-                <Text style={styles.label}>{card.label}</Text>
-              </View>
-              <View style={[styles.iconContainer, { backgroundColor: card.color }]}>
-                <Ionicons name={card.icon} size={20} color="#FFFFFF" />
-              </View>
-            </View>
-          </View>
-        ))}
-      </View>
+        </View>
+      ))}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   gridContainer: {
-    backgroundColor: '#f8fafc',
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
     padding: theme.spacing.md,
   },
-  gridRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: theme.spacing.md,
-  },
   gridCard: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 16,
+    backgroundColor: "#ffffff",
+    borderRadius: 24,
     padding: theme.spacing.lg,
-    flex: 1,
-    marginHorizontal: theme.spacing.sm,
-    height: 100,
-    elevation: 3,
-    shadowColor: '#000',
+    marginBottom: theme.spacing.md,
+    width: "48%",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.1,
     shadowRadius: 6,
-    justifyContent: 'center',
+    elevation: 3,
   },
   cardContent: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "transparent",
   },
   textContainer: {
     flex: 1,
   },
+  label: {
+    fontSize: 14,
+    color: "#6b7280",
+    fontWeight: "500",
+  },
   value: {
     fontSize: 28,
-    fontWeight: 'bold',
-    color: '#1f2937',
-    marginBottom: 4,
-  },
-  label: {
-    fontSize: 13,
-    color: '#6b7280',
-    fontWeight: '500',
+    fontWeight: "bold",
+    color: "#111827",
+    marginTop: 4,
   },
   iconContainer: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: theme.spacing.sm,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
+    width: 50,
+    height: 50,
+    borderRadius: 16,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
