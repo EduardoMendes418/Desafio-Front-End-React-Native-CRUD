@@ -82,7 +82,7 @@ export const Header: React.FC<HeaderProps> = ({ navigation }) => {
             end={{ x: 1, y: 0 }}
             style={styles.createButton}
           >
-            <Text style={styles.buttonIcon}>➕</Text>
+            <Text style={styles.buttonIcon}>✏️</Text>
             <Text style={styles.createButtonText}>{String(t("newUser"))}</Text>
           </LinearGradient>
         </TouchableOpacity>
