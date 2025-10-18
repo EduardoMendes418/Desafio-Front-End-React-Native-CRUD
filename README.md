@@ -1,6 +1,6 @@
 # 📱 UserManager Mobile
 
-<img width="433" height="916" alt="native" src="https://github.com/user-attachments/assets/8f6abbaf-e6ad-429d-9a54-8a46206ce99c" />
+![Screenshot_2025-10-18-19-02-31-372_host exp exponent](https://github.com/user-attachments/assets/3e92a803-7a33-40a7-b493-0eb1de8dd366)
 
 ---
 
