@@ -9,6 +9,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { User } from "../types/user";
 import { theme } from "../styles/theme";
+import { LinearGradient } from "expo-linear-gradient";
 
 interface UserCardProps {
   user: User;
@@ -40,11 +41,11 @@ export const UserCard: React.FC<UserCardProps> = ({
       activeOpacity={0.7}
     >
       <View style={styles.header}>
-        <View style={styles.avatar}>
+        <LinearGradient colors={["#8b5cf6", "#3b82f6"]} style={styles.avatar}>
           <Text style={styles.avatarText}>
             {user.name.charAt(0).toUpperCase()}
           </Text>
-        </View>
+        </LinearGradient>
         <View style={styles.userInfo}>
           <Text style={styles.name}>{user.name}</Text>
           <Text style={styles.id}>ID: {user.id}</Text>
@@ -79,19 +80,33 @@ export const UserCard: React.FC<UserCardProps> = ({
 
       <View style={styles.actions}>
         <TouchableOpacity
-          style={[styles.button, styles.editButton]}
           onPress={() => onEdit(user)}
+          style={{ flex: 1, marginRight: 8 }}
         >
-          <Ionicons name="create" size={16} color="#FFFFFF" />
-          <Text style={styles.buttonText}>Editar</Text>
+          <LinearGradient
+            colors={["#3b82f6", "#06b6d4"]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={styles.button}
+          >
+            <Ionicons name="create" size={16} color="#FFFFFF" />
+            <Text style={styles.buttonText}>Editar</Text>
+          </LinearGradient>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, styles.deleteButton]}
           onPress={() => onDelete(user.id)}
+          style={{ flex: 1, marginLeft: 8 }}
         >
-          <Ionicons name="trash" size={16} color="#FFFFFF" />
-          <Text style={styles.buttonText}>Excluir</Text>
+          <LinearGradient
+            colors={["#ef4444", "#ec4899"]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={styles.button}
+          >
+            <Ionicons name="trash" size={16} color="#FFFFFF" />
+            <Text style={styles.buttonText}>Excluir</Text>
+          </LinearGradient>
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
@@ -162,17 +177,14 @@ const styles = StyleSheet.create({
   },
   actions: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    marginTop: 12,
   },
   button: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: theme.spacing.md,
-    paddingVertical: theme.spacing.sm,
-    borderRadius: theme.borderRadius.sm,
-    flex: 1,
-    marginHorizontal: theme.spacing.xs,
     justifyContent: "center",
+    paddingVertical: 12,
+    borderRadius: 12,
   },
   editButton: {
     backgroundColor: theme.colors.primary,
@@ -181,8 +193,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.error,
   },
   buttonText: {
-    color: "#FFFFFF",
+    color: "#fff",
     fontWeight: "600",
-    marginLeft: theme.spacing.xs,
+    marginLeft: 8,
   },
 });
