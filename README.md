@@ -1,6 +1,6 @@
-# 📱 # Desafio User Manager Mobile
+# 📱 Desafio User Manager Mobile
 
-![mobile](https://github.com/user-attachments/assets/98bb96c7-2d62-4ad6-8392-96b92a4e1dad)
+<img width="447" height="943" alt="mobile2" src="https://github.com/user-attachments/assets/856f1a7d-b298-4ce1-a8bd-0ef40eb7b36a" />
 
 ---
 
