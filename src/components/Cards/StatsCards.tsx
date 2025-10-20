@@ -3,8 +3,8 @@ import { View, Text, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 import { useTranslation } from "react-i18next";
-import { User } from "../types/user";
-import { theme } from "../styles/theme";
+import { User } from "../../types/user";
+import { theme } from "../../styles/theme";
 import { LinearGradient } from "expo-linear-gradient";
 
 interface StatsCardsProps {

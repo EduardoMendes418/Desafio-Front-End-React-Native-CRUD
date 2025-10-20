@@ -1,10 +1,9 @@
-// components/Header.tsx
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Alert } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from "react-i18next";
-import { useUserStore } from "../stores/userStore";
-import { theme } from "../styles/theme";
+import { useUserStore } from "../../stores/userStore";
+import { theme } from "../../styles/theme";
 
 interface HeaderProps {
   navigation: any;

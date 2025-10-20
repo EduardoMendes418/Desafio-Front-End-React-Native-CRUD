@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { View, Alert, StyleSheet } from "react-native";
-import { Header } from "../components/Header";
-import { UserList } from "../components/UserList";
-import { SearchBar } from "../components/SearchBar";
-import { StatsCards } from "../components/StatsCards";
+import { Header } from "../components/Header/Header";
+import { UserList } from "../components/List/UserList";
+import { SearchBar } from "../components/Search/SearchBar";
+import { StatsCards } from "../components/Cards/StatsCards";
 import { useUserStore } from "../stores/userStore";
 import { useTranslation } from "react-i18next";
 import { theme } from "../styles/theme";

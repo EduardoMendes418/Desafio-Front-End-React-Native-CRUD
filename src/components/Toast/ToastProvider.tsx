@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Toast, { BaseToast, ErrorToast } from 'react-native-toast-message';
-import { theme } from '../styles/theme';
+import { theme } from '../../styles/theme';
 
 export const ToastProvider: React.FC = () => {
   const toastConfig = {

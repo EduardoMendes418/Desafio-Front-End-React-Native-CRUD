@@ -7,8 +7,8 @@ import {
   Linking,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { User } from "../types/user";
-import { theme } from "../styles/theme";
+import { User } from "../../types/user";
+import { theme } from "../../styles/theme";
 import { LinearGradient } from "expo-linear-gradient";
 
 interface UserCardProps {

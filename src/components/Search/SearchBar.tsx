@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useUserStore } from '../stores/userStore';
-import { theme } from '../styles/theme';
+import { useUserStore } from '../../stores/userStore';
+import { theme } from '../../styles/theme';
 import { useTranslation } from 'react-i18next';
 
 export const SearchBar: React.FC = () => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { User } from '../types/user';
-import { UserCard } from './UserCard';
+import { User } from '../../types/user';
+import { UserCard } from '../../components/Cards/UserCard';
 import { useTranslation } from 'react-i18next';
-import { theme } from '../styles/theme';
+import { theme } from '../../styles/theme';
 
 interface UserListProps {
   users: User[];

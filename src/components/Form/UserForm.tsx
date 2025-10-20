@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Alert, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { User, UserFormData } from '../types/user';
-import { useUserStore } from '../stores/userStore';
+import { User, UserFormData } from '../../types/user';
+import { useUserStore } from '../../stores/userStore';
 import { useTranslation } from 'react-i18next';
-import { theme } from '../styles/theme';
+import { theme } from '../../styles/theme';
 
 interface UserFormProps {
   user?: User | null;
