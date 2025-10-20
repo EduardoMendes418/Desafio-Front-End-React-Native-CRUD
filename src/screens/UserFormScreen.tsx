@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserForm } from '../components/Form/UserForm';
+import { UserForm } from '../components/form/UserForm';
 import { useUserStore } from '../stores/userStore';
 
 interface UserFormScreenProps {

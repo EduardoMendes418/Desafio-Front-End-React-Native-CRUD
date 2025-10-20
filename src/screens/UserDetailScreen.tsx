@@ -1,4 +1,3 @@
-// screens/UserDetailScreen.tsx
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Linking, StyleSheet, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';

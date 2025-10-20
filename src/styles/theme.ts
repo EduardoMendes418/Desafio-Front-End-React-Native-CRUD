@@ -1,4 +1,3 @@
-// styles/theme.ts
 export const theme = {
   colors: {
     primary: '#3B82F6',
